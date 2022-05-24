@@ -1,0 +1,24 @@
+{
+    "name": "database-to-types",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+        "prestart": "rimraf output",
+        "start": "ts-node src/index.ts",
+        "poststart": "npm run format",
+        "format": "prettier \"./output/*.ts\" --ignore-path ./.prettierignore --write"
+    },
+    "keywords": [],
+    "author": "Joao Rangel",
+    "license": "ISC",
+    "dependencies": {
+        "mysql2": "^2.3.3",
+        "prettier": "^2.6.2"
+    },
+    "devDependencies": {
+        "@types/node": "^17.0.35",
+        "ts-node-dev": "^1.1.8",
+        "typescript": "^4.6.4"
+    }
+}
