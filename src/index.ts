@@ -41,9 +41,9 @@ function getTypeLine(column: any) {
 }
 
 function createType(tableName: string, columns: any[]) {
-    return `export type ${tableName} = { ${columns
-        .map(getTypeLine)
-        .join(' ')} }`;
+    return `export type ${tableName} = {
+        ${columns.map(getTypeLine).join(' ')}
+    }`;
 }
 
 async function getTable(connection: Connection, name: string) {
